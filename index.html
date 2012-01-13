@@ -471,14 +471,14 @@
             <!-- Do not delete or edit the next comment -->         
             <!--auth_user_name_req_json_selection START-->
             <div class="example" id="auth_user_name_req_json" >
-
-               <b>Authentication with Token Request: JSON</b>
+               <b>Authentication with Username Request: JSON</b>
                <pre><programlisting xmlns="http://docbook.org/ns/docbook" xmlns:identity="http://docs.openstack.org/identity/api/v2.0" xmlns:capi="http://docs.openstack.org/common/api/v1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdxt="http://docs.rackspacecloud.com/xsd-ext/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="javascript">{
-    "auth": {
-        "tenantName": "customer-x",
-        "token": {
-            "id": "abcdefghijk"
-        }
+    "auth":{
+        "passwordCredentials":{
+            "username":"test_user",
+            "password":"mypass"
+        },
+        "tenantName":"customer-x"
     }
 }</programlisting></pre>
                </div>
@@ -512,14 +512,13 @@
             <!-- Do not delete or edit the next comment -->         
             <!--auth_token_req_json_selection START-->            
             <div class="example" id="auth_token_req_json" >
-               <b>Authentication with Username Request: JSON</b>
+               <b>Authentication with Token Request: JSON</b>
                <pre><programlisting xmlns="http://docbook.org/ns/docbook" xmlns:identity="http://docs.openstack.org/identity/api/v2.0" xmlns:capi="http://docs.openstack.org/common/api/v1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdxt="http://docs.rackspacecloud.com/xsd-ext/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="javascript">{
-    "auth":{
-        "passwordCredentials":{
-            "username":"test_user",
-            "password":"mypass"
-        },
-        "tenantName":"customer-x"
+    "auth": {
+        "tenantName": "customer-x",
+        "token": {
+            "id": "abcdefghijk"
+        }
     }
 }</programlisting></pre>
                </div>
